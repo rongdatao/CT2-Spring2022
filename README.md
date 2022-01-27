@@ -1,2 +1,2 @@
-# CT2-Demo
+# CT2-Homework
 Demo for website on github
