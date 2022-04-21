@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    
 </head>
 
 <body>
@@ -19,9 +21,9 @@
     <div class="big"><img src="https://img.ivsky.com/img/tupian/li/202108/11/shulan.jpg" alt="" class="bj"></div>
 </div>
 
-    <button id="start">开始</button>
-    <button id="stop">结束</button>
-    <button class="cancel">取消展示</button>
+    <button id="start">start</button>
+    <button id="stop">end</button>
+    <button class="cancel">clear</button>
  
 
     <script>
@@ -60,17 +62,17 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
         var big = document.querySelector('.big')
         var bj = document.querySelector('.bj')
 
-        //先获取ul下面的img标签还有点击放大后的阴影部分以及放大后的图片
-        for (var i = 0; i < imgs.length; i++) {//遍历所有的li下面的img图片
-            imgs[i].onclick = function () {//给每一个imgs添加一个点击事件
-                big.style.display = 'block'//点击后先将之前css内隐藏的图片显示出来
-                bj.src = this.src;//随后将imgs内每一张遍历出来的图片依次赋值给一个空的img标签
+        
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {
+                big.style.display = 'block'
+                bj.src = this.src;
             }
         }
         big.onclick = function () {
-            big.style.display = 'none'//该部分是放大后点击任意部分都将放大的图片以及阴影部分隐藏掉
+            big.style.display = 'none'
         }
-        //重置
+       
       
     document.querySelector('.cancel').onclick = function () {
             document.querySelector('.bj').style.display = 'none'
@@ -78,23 +80,23 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
     </script>
     <style>
         #box{
-            background-color:rgb(82, 69, 97);
-            border: rgb(197, 37, 37) solid 2px;
+            background-color:rgb(32, 32, 32);
+            border: #ADEEE3 solid 5px;
             border-radius: 60px;
         }
         .go {
-            border: rgb(197, 37, 37) solid 2px;
+            border: #ADEEE3 solid 10px;
             border-radius: 60px;
-            color: #000;
-            background-color: rgb(61, 8, 131);
+            color: #AD7A99;
+            background-color: #2E4052;
 
         }
 
         .stop {
-            border: rgb(197, 37, 37) solid 2px;
+            border: #F38375 solid 10px;
             border-radius: 60px;
-            color: rgb(124, 18, 18);
-            background-color: rgb(9, 211, 43);
+            color:#22162B;
+            background-color: rgb(196, 209, 149);
         }
 
         .small {

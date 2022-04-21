@@ -1,0 +1,64 @@
+@import url('./reset.css');
+@import url('./colors.css');
+@import url('./type.css');
+@import url('./layout.css');
+
+
+nav {
+    background-color: var(--black);
+}
+
+nav ul {
+    padding: 20px 0px 20px 40px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    margin: 10px 0px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+nav a {
+    color: var(--light-grey);
+}
+
+@media (min-width: 600px){
+    nav ul {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    nav {
+        background-color: var(--dark);
+    }
+    nav li {
+        margin: 10px 0px;
+        border-bottom: 1px solid var(--red);
+    }
+    
+    nav a {
+        color: var(--purple);
+    }
+}
+
+
+@media (min-width: 960px){
+    nav ul {
+        padding: 20px;
+        flex-direction: row-reverse;
+        justify-content: stretch;
+    }
+    nav {
+        background-color: var(--darkblue);
+    }
+    nav li {
+        margin: 10px 0px;
+        border-bottom: 1px solid var(--yellow);
+    }
+    
+    nav a {
+        color: var(--light-blue);
+    }
+}
